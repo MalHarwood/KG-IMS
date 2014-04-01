@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GM_IMS_DBStoreContainer" CdmEntityContainer="Entities1">
+    <EntitySetMapping Name="OPS_T_Category">
+      <EntityTypeMapping TypeName="GM_IMS_DB.OPS_T_Category">
+        <MappingFragment StoreEntitySet="OPS_T_Category">
+          <ScalarProperty Name="CategoryGUID" ColumnName="CategoryGUID" />
+          <ScalarProperty Name="EquipTypeGUID" ColumnName="EquipTypeGUID" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPS_T_Equipment">
+      <EntityTypeMapping TypeName="GM_IMS_DB.OPS_T_Equipment">
+        <MappingFragment StoreEntitySet="OPS_T_Equipment">
+          <ScalarProperty Name="EquipGUID" ColumnName="EquipGUID" />
+          <ScalarProperty Name="KGID" ColumnName="KGID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CategoryGUID" ColumnName="CategoryGUID" />
+          <ScalarProperty Name="LocationGUID" ColumnName="LocationGUID" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="Certificate" ColumnName="Certificate" />
+          <ScalarProperty Name="InService" ColumnName="InService" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="EquipTypeGUID" ColumnName="EquipTypeGUID" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPS_T_Equipment_Service">
+      <EntityTypeMapping TypeName="GM_IMS_DB.OPS_T_Equipment_Service">
+        <MappingFragment StoreEntitySet="OPS_T_Equipment_Service">
+          <ScalarProperty Name="ServiceGUID" ColumnName="ServiceGUID" />
+          <ScalarProperty Name="EquipGUID" ColumnName="EquipGUID" />
+          <ScalarProperty Name="ServiceDate" ColumnName="ServiceDate" />
+          <ScalarProperty Name="SeviceName" ColumnName="SeviceName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Tagged" ColumnName="Tagged" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPS_T_EquipTypes">
+      <EntityTypeMapping TypeName="GM_IMS_DB.OPS_T_EquipTypes">
+        <MappingFragment StoreEntitySet="OPS_T_EquipTypes">
+          <ScalarProperty Name="EquipTypeGUID" ColumnName="EquipTypeGUID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPS_T_UserSecurity">
+      <EntityTypeMapping TypeName="GM_IMS_DB.OPS_T_UserSecurity">
+        <MappingFragment StoreEntitySet="OPS_T_UserSecurity">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="SecurityLevelID" ColumnName="SecurityLevelID" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_Locations">
+      <EntityTypeMapping TypeName="GM_IMS_DB.s_Locations">
+        <MappingFragment StoreEntitySet="s_Locations">
+          <ScalarProperty Name="LocationGUID" ColumnName="LocationGUID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_NameValue">
+      <EntityTypeMapping TypeName="GM_IMS_DB.s_NameValue">
+        <MappingFragment StoreEntitySet="s_NameValue">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_Projects">
+      <EntityTypeMapping TypeName="GM_IMS_DB.s_Projects">
+        <MappingFragment StoreEntitySet="s_Projects">
+          <ScalarProperty Name="ProjGUID" ColumnName="ProjGUID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="ClientProject" ColumnName="ClientProject" />
+          <ScalarProperty Name="LocationGUID" ColumnName="LocationGUID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDatePlanned" ColumnName="EndDatePlanned" />
+          <ScalarProperty Name="EndDateActual" ColumnName="EndDateActual" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_SecurityLevels">
+      <EntityTypeMapping TypeName="GM_IMS_DB.s_SecurityLevels">
+        <MappingFragment StoreEntitySet="s_SecurityLevels">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="SecurityLevel" ColumnName="SecurityLevel" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_WBS">
+      <EntityTypeMapping TypeName="GM_IMS_DB.s_WBS">
+        <MappingFragment StoreEntitySet="s_WBS">
+          <ScalarProperty Name="WBSGUID" ColumnName="WBSGUID" />
+          <ScalarProperty Name="ProjGUID" ColumnName="ProjGUID" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="s_People">
+      <EntityTypeMapping TypeName="GM_IMS_DB.s_People">
+        <MappingFragment StoreEntitySet="s_People">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="GivenName" ColumnName="GivenName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Workphone" ColumnName="Workphone" />
+          <ScalarProperty Name="Homephone" ColumnName="Homephone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="GenderClassGUID" ColumnName="GenderClassGUID" />
+          <ScalarProperty Name="EmploymentClassID" ColumnName="EmploymentClassID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="OrganisationGUID" ColumnName="OrganisationGUID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="OnsiteContact" ColumnName="OnsiteContact" />
+          <ScalarProperty Name="OffsiteContact" ColumnName="OffsiteContact" />
+          <ScalarProperty Name="CommencedOn" ColumnName="CommencedOn" />
+          <ScalarProperty Name="CeasedOn" ColumnName="CeasedOn" />
+          <ScalarProperty Name="SupervisorGUID" ColumnName="SupervisorGUID" />
+          <ScalarProperty Name="NextofKin" ColumnName="NextofKin" />
+          <ScalarProperty Name="NextofKinPhone" ColumnName="NextofKinPhone" />
+          <ScalarProperty Name="StaffContractor" ColumnName="StaffContractor" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+          <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+          <ScalarProperty Name="MineHealthNumber" ColumnName="MineHealthNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

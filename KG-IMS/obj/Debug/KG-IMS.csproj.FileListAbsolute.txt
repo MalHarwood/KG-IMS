@@ -1,0 +1,6 @@
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\KG-IMS.dll.config
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\KG-IMS.dll
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\KG-IMS.pdb
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Debug\KG-IMS.csprojResolveAssemblyReference.cache
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Debug\KG-IMS.dll
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Debug\KG-IMS.pdb

@@ -1,0 +1,10 @@
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\KG-IMS.dll.config
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\KG-IMS.dll
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\KG-IMS.pdb
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Release\KG-IMS.csprojResolveAssemblyReference.cache
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Release\KG-IMS.dll
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Release\KG-IMS.pdb
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.dll
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.SqlServer.dll
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.xml
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.SqlServer.xml

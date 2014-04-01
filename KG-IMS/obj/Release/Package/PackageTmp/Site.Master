@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="KG_IMS.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/KC-IMS.css" type="text/css" rel="stylesheet" media="screen" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="outer">
+
+            <div id="left">
+                User:<br />
+                <b><%=HttpContext.Current.User.Identity.Name.ToString() %></b><br />
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ImageSet="Simple" ShowLines="True" >
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                    <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+                    <ParentNodeStyle Font-Bold="False" />
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+
+                <asp:SiteMapDataSource ID="SiteMapDataSource1"
+                    runat="server" ShowStartingNode="false" />
+            </div>
+
+            <div id="centrecontent">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="siteMap">
+                </asp:SiteMapPath>
+                <br />
+                <br />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div id="clearfooter"></div>
+        </div>
+        <div id="footer">
+            Footer -  - Footer
+	<p></p>
+        </div>
+        <div id="header">
+            <asp:Table runat="server" Width="100%" CellPadding="0" CellSpacing="0">
+                <asp:TableRow>
+                    <asp:TableCell Width="25%"><asp:Image runat="server" ImageUrl="~/Images/KG_Logo.jpg"></asp:Image></asp:TableCell>
+                    <asp:TableCell><b>IMS</b></asp:TableCell>
+                    <asp:TableCell Width="25%" HorizontalAlign="Right"><asp:Image runat="server" ImageUrl="~/Images/SafetyAllRound.jpg"></asp:Image></asp:TableCell>
+                </asp:TableRow>
+            </asp:Table>
+
+        </div>
+    </form>
+</body>
+
+</html>

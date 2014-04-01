@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="Home"  description="The WebSite's Home Page">
+    <siteMapNode title="Safety" url="~/IMS/HSE/Default.aspx" description="Safety (HSE) AS4801">
+    </siteMapNode>
+    <siteMapNode title="Quality" url="~/IMS/QCC/Default.aspx" description="Quality (QCC) ISO 9001">
+    </siteMapNode>
+    <siteMapNode title="Employee Relations" url="~/IMS/ERM/Default.aspx"  description="Employee Relations (ERM)">
+      <siteMapNode title="Emp Details" url="~/IMS/ERM/PersonDetails.aspx" description="Employee Details" />
+    </siteMapNode>
+    <siteMapNode title="Administration" url="~/IMS/ADM/Default.aspx"  description="Administration (ADM)" roles="*">
+      <siteMapNode title="System" url="~/IMS/ADM/SysAdm.aspx" description="System Administration">
+        <siteMapNode title="Projects" url="~/IMS/ADM/SysAdm-Projects.aspx" description="Edit Projects">
+        </siteMapNode>
+        <siteMapNode title="WBS" url="~/IMS/ADM/SysAdm-WBS.aspx" description="Edit Project WBS">
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Operations" url="~/IMS/OPS/Default.aspx" description="Operations (OPS)">
+      <siteMapNode title="Tagging" url="~/IMS/OPS/Tagging/Default.aspx" description="Equipment Tagging" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

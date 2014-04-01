@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\WWW_KG</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="000 Web Site Security.txt">
+      <publishTime>03/27/2014 21:25:22</publishTime>
+    </File>
+    <File Include="ADM/Default.aspx">
+      <publishTime>03/27/2014 17:44:34</publishTime>
+    </File>
+    <File Include="ADM/SystemAdmin.aspx">
+      <publishTime>03/27/2014 17:45:05</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/30/2014 11:02:43</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/30/2014 11:02:43</publishTime>
+    </File>
+    <File Include="bin/KG-IMS.dll">
+      <publishTime>03/31/2014 21:58:21</publishTime>
+    </File>
+    <File Include="DAL/0000 WEB REFERENCE.txt">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="DAL/System.dbml">
+      <publishTime>03/31/2014 21:56:54</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>03/28/2014 17:17:01</publishTime>
+    </File>
+    <File Include="HSE/Default.aspx">
+      <publishTime>03/27/2014 20:09:32</publishTime>
+    </File>
+    <File Include="Images/addnew.gif">
+      <publishTime>03/31/2014 00:29:04</publishTime>
+    </File>
+    <File Include="Images/blue_line.gif">
+      <publishTime>03/27/2014 05:58:07</publishTime>
+    </File>
+    <File Include="Images/delete.gif">
+      <publishTime>03/31/2014 00:14:55</publishTime>
+    </File>
+    <File Include="Images/edit.gif">
+      <publishTime>03/31/2014 00:14:57</publishTime>
+    </File>
+    <File Include="Images/KG_Logo.jpg">
+      <publishTime>03/27/2014 06:03:19</publishTime>
+    </File>
+    <File Include="Images/not_ok.gif">
+      <publishTime>03/31/2014 00:12:54</publishTime>
+    </File>
+    <File Include="Images/ok.gif">
+      <publishTime>03/31/2014 00:12:54</publishTime>
+    </File>
+    <File Include="Images/SafetyAllRound.jpg">
+      <publishTime>03/27/2014 06:03:19</publishTime>
+    </File>
+    <File Include="Images/spacer.gif">
+      <publishTime>03/27/2014 06:16:23</publishTime>
+    </File>
+    <File Include="IMS/ADM/Default.aspx">
+      <publishTime>03/30/2014 21:57:51</publishTime>
+    </File>
+    <File Include="IMS/ADM/SysAdm-Projects.aspx">
+      <publishTime>03/31/2014 20:28:34</publishTime>
+    </File>
+    <File Include="IMS/ADM/SysAdm-Roles.aspx">
+      <publishTime>03/31/2014 07:46:20</publishTime>
+    </File>
+    <File Include="IMS/ADM/SysAdm-WBS.aspx">
+      <publishTime>03/31/2014 21:58:19</publishTime>
+    </File>
+    <File Include="IMS/ADM/SysAdm.aspx">
+      <publishTime>03/30/2014 23:57:54</publishTime>
+    </File>
+    <File Include="IMS/ERM/Default.aspx">
+      <publishTime>03/30/2014 21:59:22</publishTime>
+    </File>
+    <File Include="IMS/ERM/PersonDetails.aspx">
+      <publishTime>03/30/2014 21:59:22</publishTime>
+    </File>
+    <File Include="IMS/HSE/Default.aspx">
+      <publishTime>03/30/2014 22:00:17</publishTime>
+    </File>
+    <File Include="IMS/OPS/DailyReport/Default.aspx">
+      <publishTime>03/28/2014 23:23:43</publishTime>
+    </File>
+    <File Include="IMS/OPS/DailyReport/NewReport.aspx">
+      <publishTime>03/28/2014 23:24:03</publishTime>
+    </File>
+    <File Include="IMS/OPS/Default.aspx">
+      <publishTime>03/30/2014 22:00:51</publishTime>
+    </File>
+    <File Include="IMS/OPS/Tagging/Default.aspx">
+      <publishTime>03/28/2014 17:14:32</publishTime>
+    </File>
+    <File Include="IMS/OPS/Tagging/View.aspx">
+      <publishTime>03/28/2014 17:14:32</publishTime>
+    </File>
+    <File Include="IMS/OPS/Tagging/ViewDetails.aspx">
+      <publishTime>03/28/2014 17:14:32</publishTime>
+    </File>
+    <File Include="IMS/QCC/Default.aspx">
+      <publishTime>03/30/2014 22:00:17</publishTime>
+    </File>
+    <File Include="OPS/Default.aspx">
+      <publishTime>03/27/2014 20:08:32</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/30/2014 11:02:49</publishTime>
+    </File>
+    <File Include="QCC/Default.aspx">
+      <publishTime>03/27/2014 20:09:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.intellisense.js">
+      <publishTime>03/27/2014 05:28:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.js">
+      <publishTime>03/27/2014 05:28:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.min.js">
+      <publishTime>03/27/2014 05:28:51</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>03/31/2014 12:17:34</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>03/27/2014 20:03:13</publishTime>
+    </File>
+    <File Include="Styles/KC-IMS.css">
+      <publishTime>03/28/2014 20:25:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/31/2014 18:57:04</publishTime>
+    </File>
+    <File Include="Web.sitemap">
+      <publishTime>03/31/2014 18:55:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

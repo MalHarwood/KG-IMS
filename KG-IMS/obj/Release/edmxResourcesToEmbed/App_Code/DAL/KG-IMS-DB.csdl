@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GM_IMS_DB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="OPS_T_Category">
+    <Key>
+      <PropertyRef Name="CategoryGUID" />
+    </Key>
+    <Property Name="CategoryGUID" Type="Guid" Nullable="false" />
+    <Property Name="EquipTypeGUID" Type="Guid" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OPS_T_EquipTypes" Relationship="Self.OPS_T_Category_FK00" FromRole="OPS_T_Category" ToRole="OPS_T_EquipTypes" />
+    <NavigationProperty Name="OPS_T_Equipment" Relationship="Self.OPS_T_Equipment_FK00" FromRole="OPS_T_Category" ToRole="OPS_T_Equipment" />
+  </EntityType>
+  <EntityType Name="OPS_T_Equipment">
+    <Key>
+      <PropertyRef Name="EquipGUID" />
+    </Key>
+    <Property Name="EquipGUID" Type="Guid" Nullable="false" />
+    <Property Name="KGID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryGUID" Type="Guid" Nullable="false" />
+    <Property Name="LocationGUID" Type="Guid" Nullable="false" />
+    <Property Name="SerialNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Supplier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PurchasePrice" Type="Double" />
+    <Property Name="Certificate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="InService" Type="Boolean" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="EquipTypeGUID" Type="Guid" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OPS_T_Category" Relationship="Self.OPS_T_Equipment_FK00" FromRole="OPS_T_Equipment" ToRole="OPS_T_Category" />
+    <NavigationProperty Name="OPS_T_EquipTypes" Relationship="Self.OPS_T_Equipment_FK01" FromRole="OPS_T_Equipment" ToRole="OPS_T_EquipTypes" />
+    <NavigationProperty Name="s_Locations" Relationship="Self.OPS_T_Equipment_FK02" FromRole="OPS_T_Equipment" ToRole="s_Locations" />
+    <NavigationProperty Name="OPS_T_Equipment_Service" Relationship="Self.OPS_T_Equipment_Service_FK00" FromRole="OPS_T_Equipment" ToRole="OPS_T_Equipment_Service" />
+  </EntityType>
+  <EntityType Name="OPS_T_Equipment_Service">
+    <Key>
+      <PropertyRef Name="ServiceGUID" />
+    </Key>
+    <Property Name="ServiceGUID" Type="Guid" Nullable="false" />
+    <Property Name="EquipGUID" Type="Guid" />
+    <Property Name="ServiceDate" Type="DateTime" Precision="3" />
+    <Property Name="SeviceName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Tagged" Type="Boolean" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OPS_T_Equipment" Relationship="Self.OPS_T_Equipment_Service_FK00" FromRole="OPS_T_Equipment_Service" ToRole="OPS_T_Equipment" />
+  </EntityType>
+  <EntityType Name="OPS_T_EquipTypes">
+    <Key>
+      <PropertyRef Name="EquipTypeGUID" />
+    </Key>
+    <Property Name="EquipTypeGUID" Type="Guid" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OPS_T_Category" Relationship="Self.OPS_T_Category_FK00" FromRole="OPS_T_EquipTypes" ToRole="OPS_T_Category" />
+    <NavigationProperty Name="OPS_T_Equipment" Relationship="Self.OPS_T_Equipment_FK01" FromRole="OPS_T_EquipTypes" ToRole="OPS_T_Equipment" />
+  </EntityType>
+  <EntityType Name="OPS_T_UserSecurity">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="Guid" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityLevelID" Type="Int32" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="s_Locations">
+    <Key>
+      <PropertyRef Name="LocationGUID" />
+    </Key>
+    <Property Name="LocationGUID" Type="Guid" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OPS_T_Equipment" Relationship="Self.OPS_T_Equipment_FK02" FromRole="s_Locations" ToRole="OPS_T_Equipment" />
+    <NavigationProperty Name="s_Projects" Relationship="Self.s_Projects_FK00" FromRole="s_Locations" ToRole="s_Projects" />
+  </EntityType>
+  <EntityType Name="s_NameValue">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="s_Projects">
+    <Key>
+      <PropertyRef Name="ProjGUID" />
+    </Key>
+    <Property Name="ProjGUID" Type="Guid" Nullable="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProjectNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Client" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClientProject" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LocationGUID" Type="Guid" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDatePlanned" Type="DateTime" Precision="3" />
+    <Property Name="EndDateActual" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="s_Locations" Relationship="Self.s_Projects_FK00" FromRole="s_Projects" ToRole="s_Locations" />
+    <NavigationProperty Name="s_WBS" Relationship="Self.s_WBS_FK00" FromRole="s_Projects" ToRole="s_WBS" />
+  </EntityType>
+  <EntityType Name="s_SecurityLevels">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="Guid" Nullable="false" />
+    <Property Name="SecurityLevel" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="s_WBS">
+    <Key>
+      <PropertyRef Name="WBSGUID" />
+    </Key>
+    <Property Name="WBSGUID" Type="Guid" Nullable="false" />
+    <Property Name="ProjGUID" Type="Guid" Nullable="false" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DueDate" Type="DateTime" Precision="3" />
+    <Property Name="CompletedDate" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="s_Projects" Relationship="Self.s_WBS_FK00" FromRole="s_WBS" ToRole="s_Projects" />
+  </EntityType>
+  <EntityType Name="s_People">
+    <Key>
+      <PropertyRef Name="GUID" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="ChangedOn" />
+    </Key>
+    <Property Name="GUID" Type="Guid" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GivenName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Workphone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Homephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="GenderClassGUID" Type="Guid" />
+    <Property Name="EmploymentClassID" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OrganisationGUID" Type="Guid" />
+    <Property Name="EmployeeID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OnsiteContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OffsiteContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommencedOn" Type="DateTime" Precision="3" />
+    <Property Name="CeasedOn" Type="DateTime" Precision="3" />
+    <Property Name="SupervisorGUID" Type="Guid" />
+    <Property Name="NextofKin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NextofKinPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StaffContractor" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PhotoID" Type="Int32" />
+    <Property Name="MineHealthNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="OPS_T_Category_FK00">
+    <End Role="OPS_T_EquipTypes" Type="Self.OPS_T_EquipTypes" Multiplicity="0..1" />
+    <End Role="OPS_T_Category" Type="Self.OPS_T_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPS_T_EquipTypes">
+        <PropertyRef Name="EquipTypeGUID" />
+      </Principal>
+      <Dependent Role="OPS_T_Category">
+        <PropertyRef Name="EquipTypeGUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OPS_T_Equipment_FK00">
+    <End Role="OPS_T_Category" Type="Self.OPS_T_Category" Multiplicity="1" />
+    <End Role="OPS_T_Equipment" Type="Self.OPS_T_Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPS_T_Category">
+        <PropertyRef Name="CategoryGUID" />
+      </Principal>
+      <Dependent Role="OPS_T_Equipment">
+        <PropertyRef Name="CategoryGUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OPS_T_Equipment_FK01">
+    <End Role="OPS_T_EquipTypes" Type="Self.OPS_T_EquipTypes" Multiplicity="0..1" />
+    <End Role="OPS_T_Equipment" Type="Self.OPS_T_Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPS_T_EquipTypes">
+        <PropertyRef Name="EquipTypeGUID" />
+      </Principal>
+      <Dependent Role="OPS_T_Equipment">
+        <PropertyRef Name="EquipTypeGUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OPS_T_Equipment_FK02">
+    <End Role="s_Locations" Type="Self.s_Locations" Multiplicity="1" />
+    <End Role="OPS_T_Equipment" Type="Self.OPS_T_Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="s_Locations">
+        <PropertyRef Name="LocationGUID" />
+      </Principal>
+      <Dependent Role="OPS_T_Equipment">
+        <PropertyRef Name="LocationGUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OPS_T_Equipment_Service_FK00">
+    <End Role="OPS_T_Equipment" Type="Self.OPS_T_Equipment" Multiplicity="0..1" />
+    <End Role="OPS_T_Equipment_Service" Type="Self.OPS_T_Equipment_Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPS_T_Equipment">
+        <PropertyRef Name="EquipGUID" />
+      </Principal>
+      <Dependent Role="OPS_T_Equipment_Service">
+        <PropertyRef Name="EquipGUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="s_Projects_FK00">
+    <End Role="s_Locations" Type="Self.s_Locations" Multiplicity="1" />
+    <End Role="s_Projects" Type="Self.s_Projects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="s_Locations">
+        <PropertyRef Name="LocationGUID" />
+      </Principal>
+      <Dependent Role="s_Projects">
+        <PropertyRef Name="LocationGUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="s_WBS_FK00">
+    <End Role="s_Projects" Type="Self.s_Projects" Multiplicity="1" />
+    <End Role="s_WBS" Type="Self.s_WBS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="s_Projects">
+        <PropertyRef Name="ProjGUID" />
+      </Principal>
+      <Dependent Role="s_WBS">
+        <PropertyRef Name="ProjGUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="OPS_T_Category" EntityType="Self.OPS_T_Category" />
+    <EntitySet Name="OPS_T_Equipment" EntityType="Self.OPS_T_Equipment" />
+    <EntitySet Name="OPS_T_Equipment_Service" EntityType="Self.OPS_T_Equipment_Service" />
+    <EntitySet Name="OPS_T_EquipTypes" EntityType="Self.OPS_T_EquipTypes" />
+    <EntitySet Name="OPS_T_UserSecurity" EntityType="Self.OPS_T_UserSecurity" />
+    <EntitySet Name="s_Locations" EntityType="Self.s_Locations" />
+    <EntitySet Name="s_NameValue" EntityType="Self.s_NameValue" />
+    <EntitySet Name="s_Projects" EntityType="Self.s_Projects" />
+    <EntitySet Name="s_SecurityLevels" EntityType="Self.s_SecurityLevels" />
+    <EntitySet Name="s_WBS" EntityType="Self.s_WBS" />
+    <EntitySet Name="s_People" EntityType="Self.s_People" />
+    <AssociationSet Name="OPS_T_Category_FK00" Association="Self.OPS_T_Category_FK00">
+      <End Role="OPS_T_EquipTypes" EntitySet="OPS_T_EquipTypes" />
+      <End Role="OPS_T_Category" EntitySet="OPS_T_Category" />
+    </AssociationSet>
+    <AssociationSet Name="OPS_T_Equipment_FK00" Association="Self.OPS_T_Equipment_FK00">
+      <End Role="OPS_T_Category" EntitySet="OPS_T_Category" />
+      <End Role="OPS_T_Equipment" EntitySet="OPS_T_Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="OPS_T_Equipment_FK01" Association="Self.OPS_T_Equipment_FK01">
+      <End Role="OPS_T_EquipTypes" EntitySet="OPS_T_EquipTypes" />
+      <End Role="OPS_T_Equipment" EntitySet="OPS_T_Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="OPS_T_Equipment_FK02" Association="Self.OPS_T_Equipment_FK02">
+      <End Role="s_Locations" EntitySet="s_Locations" />
+      <End Role="OPS_T_Equipment" EntitySet="OPS_T_Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="OPS_T_Equipment_Service_FK00" Association="Self.OPS_T_Equipment_Service_FK00">
+      <End Role="OPS_T_Equipment" EntitySet="OPS_T_Equipment" />
+      <End Role="OPS_T_Equipment_Service" EntitySet="OPS_T_Equipment_Service" />
+    </AssociationSet>
+    <AssociationSet Name="s_Projects_FK00" Association="Self.s_Projects_FK00">
+      <End Role="s_Locations" EntitySet="s_Locations" />
+      <End Role="s_Projects" EntitySet="s_Projects" />
+    </AssociationSet>
+    <AssociationSet Name="s_WBS_FK00" Association="Self.s_WBS_FK00">
+      <End Role="s_Projects" EntitySet="s_Projects" />
+      <End Role="s_WBS" EntitySet="s_WBS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

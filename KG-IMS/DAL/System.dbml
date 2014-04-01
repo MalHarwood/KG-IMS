@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KG-IMS" Class="SystemDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=MALH-PC\MSSQLSERVER2012;Initial Catalog=KG-IMS;Persist Security Info=True;User ID=KGC" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="KG_IMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.s_Locations" Member="s_Locations">
+    <Type Name="s_Locations">
+      <Column Name="LocationGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="s_Locations_s_ProjectLocations" Member="s_ProjectLocations" ThisKey="LocationGUID" OtherKey="LocationGUID" Type="s_ProjectLocations" />
+    </Type>
+  </Table>
+  <Table Name="dbo.s_WBS" Member="s_WBS">
+    <Type Name="s_WBS">
+      <Column Name="WBSGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProjGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CompletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ChangedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="s_Projects_s_WBS" Member="s_Projects" ThisKey="ProjGUID" OtherKey="ProjGUID" Type="s_Projects" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.s_NameValue" Member="s_NameValue">
+    <Type Name="s_NameValue">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChangedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.s_People" Member="s_People">
+    <Type Name="s_People">
+      <Column Name="GUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="GivenName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Workphone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Homephone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GenderClassGUID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EmploymentClassID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OrganisationGUID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="OnsiteContact" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OffsiteContact" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CommencedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CeasedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SupervisorGUID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NextofKin" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NextofKinPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StaffContractor" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChangedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MineHealthNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RoleGUID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="s_SecurityLevels_s_People" Member="s_SecurityLevels" ThisKey="RoleGUID" OtherKey="GUID" Type="s_SecurityLevels" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.s_ProjectLocations" Member="s_ProjectLocations">
+    <Type Name="s_ProjectLocations">
+      <Column Name="ProjLocGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProjGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LocationGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="s_Locations_s_ProjectLocations" Member="s_Locations" ThisKey="LocationGUID" OtherKey="LocationGUID" Type="s_Locations" IsForeignKey="true" />
+      <Association Name="s_Projects_s_ProjectLocations" Member="s_Projects" ThisKey="ProjGUID" OtherKey="ProjGUID" Type="s_Projects" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.s_Projects" Member="s_Projects">
+    <Type Name="s_Projects">
+      <Column Name="ProjGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Client" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientProject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LocationGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDatePlanned" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDateActual" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="s_Projects_s_WBS" Member="s_WBS" ThisKey="ProjGUID" OtherKey="ProjGUID" Type="s_WBS" />
+      <Association Name="s_Projects_s_ProjectLocations" Member="s_ProjectLocations" ThisKey="ProjGUID" OtherKey="ProjGUID" Type="s_ProjectLocations" />
+    </Type>
+  </Table>
+  <Table Name="dbo.s_SecurityLevels" Member="s_SecurityLevels">
+    <Type Name="s_SecurityLevels">
+      <Column Name="GUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SecurityLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChangedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChangedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="s_SecurityLevels_s_People" Member="s_People" ThisKey="GUID" OtherKey="RoleGUID" Type="s_People" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_PeopleRole" Member="v_PeopleRole">
+    <Type Name="v_PeopleRole">
+      <Column Name="GUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="GivenName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
