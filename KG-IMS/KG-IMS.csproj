@@ -73,21 +73,21 @@
     <Content Include="Images\edit.gif" />
     <Content Include="Images\not_ok.gif" />
     <Content Include="Images\ok.gif" />
-    <Content Include="IMS\ADM\SysAdm-Projects.aspx" />
-    <Content Include="IMS\ADM\SysAdm-Roles.aspx" />
-    <Content Include="IMS\ADM\SysAdm-WBS.aspx" />
-    <Content Include="IMS\ERM\Default.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Projects.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Roles.aspx" />
+    <Content Include="IMS\ADM\SysAdm\WBS.aspx" />
+    <Content Include="IMS\ERM\Default-ERM.aspx" />
     <Content Include="IMS\ERM\PersonDetails.aspx" />
-    <Content Include="IMS\OPS\DailyReport\Default.aspx" />
+    <Content Include="IMS\OPS\DailyReport\Default-DailyReport.aspx" />
     <Content Include="IMS\OPS\DailyReport\NewReport.aspx" />
-    <Content Include="IMS\OPS\Default.aspx" />
-    <Content Include="IMS\OPS\Tagging\Default.aspx" />
+    <Content Include="IMS\OPS\Default-OPS.aspx" />
+    <Content Include="IMS\OPS\Tagging\Default-Tagging.aspx" />
     <Content Include="IMS\OPS\Tagging\View.aspx" />
     <Content Include="IMS\OPS\Tagging\ViewDetails.aspx" />
-    <Content Include="IMS\QCC\Default.aspx" />
-    <Content Include="IMS\HSE\Default.aspx" />
+    <Content Include="IMS\QCC\Default-QCC.aspx" />
+    <Content Include="IMS\HSE\Default-HSE.aspx" />
     <Content Include="IMS\ADM\Default.aspx" />
-    <Content Include="IMS\ADM\SysAdm.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\blue_line.gif" />
     <Content Include="Images\KG_Logo.jpg" />
@@ -102,6 +102,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KG_IMS_SiteMap.cs" />
     <Compile Include="BLL\SiteMapCustomRoleProvider.cs" />
     <Compile Include="BLL\UserSecurity.cs" />
     <Compile Include="DAL\System.designer.cs">
@@ -109,33 +110,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>System.dbml</DependentUpon>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm-Projects.aspx.cs">
-      <DependentUpon>SysAdm-Projects.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm-Projects.aspx.designer.cs">
-      <DependentUpon>SysAdm-Projects.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm-Roles.aspx.cs">
-      <DependentUpon>SysAdm-Roles.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm-Roles.aspx.designer.cs">
-      <DependentUpon>SysAdm-Roles.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm-WBS.aspx.cs">
-      <DependentUpon>SysAdm-WBS.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\WBS.aspx.cs">
+      <DependentUpon>WBS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm-WBS.aspx.designer.cs">
-      <DependentUpon>SysAdm-WBS.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\WBS.aspx.designer.cs">
+      <DependentUpon>WBS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\ERM\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\ERM\Default-ERM.aspx.cs">
+      <DependentUpon>Default-ERM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\ERM\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\ERM\Default-ERM.aspx.designer.cs">
+      <DependentUpon>Default-ERM.aspx</DependentUpon>
     </Compile>
     <Compile Include="IMS\ERM\PersonDetails.aspx.cs">
       <DependentUpon>PersonDetails.aspx</DependentUpon>
@@ -144,12 +145,12 @@
     <Compile Include="IMS\ERM\PersonDetails.aspx.designer.cs">
       <DependentUpon>PersonDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\OPS\DailyReport\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\OPS\DailyReport\Default-DailyReport.aspx.cs">
+      <DependentUpon>Default-DailyReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\OPS\DailyReport\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\OPS\DailyReport\Default-DailyReport.aspx.designer.cs">
+      <DependentUpon>Default-DailyReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="IMS\OPS\DailyReport\NewReport.aspx.cs">
       <DependentUpon>NewReport.aspx</DependentUpon>
@@ -158,19 +159,19 @@
     <Compile Include="IMS\OPS\DailyReport\NewReport.aspx.designer.cs">
       <DependentUpon>NewReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\OPS\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\OPS\Default-OPS.aspx.cs">
+      <DependentUpon>Default-OPS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\OPS\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\OPS\Default-OPS.aspx.designer.cs">
+      <DependentUpon>Default-OPS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\OPS\Tagging\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\OPS\Tagging\Default-Tagging.aspx.cs">
+      <DependentUpon>Default-Tagging.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\OPS\Tagging\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\OPS\Tagging\Default-Tagging.aspx.designer.cs">
+      <DependentUpon>Default-Tagging.aspx</DependentUpon>
     </Compile>
     <Compile Include="IMS\OPS\Tagging\View.aspx.cs">
       <DependentUpon>View.aspx</DependentUpon>
@@ -186,19 +187,19 @@
     <Compile Include="IMS\OPS\Tagging\ViewDetails.aspx.designer.cs">
       <DependentUpon>ViewDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\QCC\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\QCC\Default-QCC.aspx.cs">
+      <DependentUpon>Default-QCC.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\QCC\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\QCC\Default-QCC.aspx.designer.cs">
+      <DependentUpon>Default-QCC.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\HSE\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\HSE\Default-HSE.aspx.cs">
+      <DependentUpon>Default-HSE.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\HSE\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="IMS\HSE\Default-HSE.aspx.designer.cs">
+      <DependentUpon>Default-HSE.aspx</DependentUpon>
     </Compile>
     <Compile Include="IMS\ADM\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -207,12 +208,12 @@
     <Compile Include="IMS\ADM\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm.aspx.cs">
-      <DependentUpon>SysAdm.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm.aspx.designer.cs">
-      <DependentUpon>SysAdm.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
