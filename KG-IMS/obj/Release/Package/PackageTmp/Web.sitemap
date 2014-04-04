@@ -8,16 +8,32 @@
     <siteMapNode title="Employee Relations" url="~/IMS/ERM/Default.aspx"  description="Employee Relations (ERM)">
       <siteMapNode title="Emp Details" url="~/IMS/ERM/PersonDetails.aspx" description="Employee Details" />
     </siteMapNode>
-    <siteMapNode title="Administration" url="~/IMS/ADM/Default.aspx"  description="Administration (ADM)" roles="*">
-      <siteMapNode title="System" url="~/IMS/ADM/SysAdm.aspx" description="System Administration">
-        <siteMapNode title="Projects" url="~/IMS/ADM/SysAdm-Projects.aspx" description="Edit Projects">
-        </siteMapNode>
-        <siteMapNode title="WBS" url="~/IMS/ADM/SysAdm-WBS.aspx" description="Edit Project WBS">
-        </siteMapNode>
+    <siteMapNode title="Administration" description="Administration (ADM)" roles="*">
+      <siteMapNode title="Sys Adm" description="System Administration" roles="*">
+        <siteMapNode title="Configuration" url="~/IMS/ADM/SysAdm/Configuration.aspx" description="Edit Projects" />
+        <siteMapNode title="Locations" url="~/IMS/ADM/SysAdm/Locations.aspx" description="Edit Projects" />
+        <siteMapNode title="People" url="~/IMS/ADM/SysAdm/People.aspx" description="Edit Projects" />
+        <siteMapNode title="Projects" url="~/IMS/ADM/SysAdm/Projects.aspx" description="Edit Projects" />
+        <siteMapNode title="Security Levels" url="~/IMS/ADM/SysAdm/Security Levels.aspx" description="Edit Projects" />
+        <siteMapNode title="WBS" url="~/IMS/ADM/SysAdm/WBS.aspx" description="Edit Project WBS" />
+        <siteMapNode title="Rpt Types" url="~/IMS/ADM/SysAdm/Rpt Type.aspx" description="Edit Projects" />
+        <siteMapNode title="Rpt Sections" url="~/IMS/ADM/SysAdm/Rpt Type Sec.aspx" description="Edit Projects" />
+        <siteMapNode title="Rpt Content" url="~/IMS/ADM/SysAdm/Rpt Type Sec Cont.aspx" description="Edit Projects" />
       </siteMapNode>
     </siteMapNode>
     <siteMapNode title="Operations" url="~/IMS/OPS/Default.aspx" description="Operations (OPS)">
-      <siteMapNode title="Tagging" url="~/IMS/OPS/Tagging/Default.aspx" description="Equipment Tagging" />
+      <siteMapNode title="Tagging" description="Equipment Tagging" >
+        <siteMapNode title="Electrical" description="Electrical" >
+          <siteMapNode title="List" url="~/IMS/OPS/Tagging/View.aspx?type=electrical" description="List" />
+          <siteMapNode title="Detail" url="~/IMS/OPS/Tagging/ViewDetails.aspx?type=electrical" description="View Details" />
+        </siteMapNode>
+        <siteMapNode title="Rigging" description="Rigging" >
+          <siteMapNode title="List" url="~/IMS/OPS/Tagging/View.aspx?type=rigging" description="List" />
+          <siteMapNode title="Detail" url="~/IMS/OPS/Tagging/ViewDetails.aspx?type=rigging" description="View Details" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Reporting" url="~/IMS/OPS/Reporting/Default.aspx" description="Equipment Tagging" >
+      </siteMapNode>
     </siteMapNode>
   </siteMapNode>
 </siteMap>

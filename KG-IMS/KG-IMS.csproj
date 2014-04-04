@@ -14,7 +14,7 @@
     <RootNamespace>KG_IMS</RootNamespace>
     <AssemblyName>KG-IMS</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -34,9 +34,11 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -69,30 +71,40 @@
     <Content Include="000 Web Site Security.txt" />
     <Content Include="DAL\0000 WEB REFERENCE.txt" />
     <Content Include="Images\addnew.gif" />
+    <Content Include="Images\cal.gif" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\cal_close.gif" />
+    <Content Include="Images\cal_fastforward.gif" />
+    <Content Include="Images\cal_fastreverse.gif" />
+    <Content Include="Images\cal_forward.gif" />
+    <Content Include="Images\cal_minus.gif" />
+    <Content Include="Images\cal_plus.gif" />
+    <Content Include="Images\cal_reverse.gif" />
     <Content Include="Images\delete.gif" />
     <Content Include="Images\edit.gif" />
     <Content Include="Images\not_ok.gif" />
     <Content Include="Images\ok.gif" />
+    <Content Include="IMS\ADM\SysAdm\Configuration.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Locations.aspx" />
+    <Content Include="IMS\ADM\SysAdm\People.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Project Locations.aspx" />
     <Content Include="IMS\ADM\SysAdm\Projects.aspx" />
-    <Content Include="IMS\ADM\SysAdm\Roles.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Rpt Type Sec Cont.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Rpt Type.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Rpt Type Sec.aspx" />
+    <Content Include="IMS\ADM\SysAdm\Security Levels.aspx" />
     <Content Include="IMS\ADM\SysAdm\WBS.aspx" />
-    <Content Include="IMS\ERM\Default-ERM.aspx" />
     <Content Include="IMS\ERM\PersonDetails.aspx" />
     <Content Include="IMS\OPS\DailyReport\Default-DailyReport.aspx" />
     <Content Include="IMS\OPS\DailyReport\NewReport.aspx" />
-    <Content Include="IMS\OPS\Default-OPS.aspx" />
-    <Content Include="IMS\OPS\Tagging\Default-Tagging.aspx" />
     <Content Include="IMS\OPS\Tagging\View.aspx" />
     <Content Include="IMS\OPS\Tagging\ViewDetails.aspx" />
-    <Content Include="IMS\QCC\Default-QCC.aspx" />
-    <Content Include="IMS\HSE\Default-HSE.aspx" />
-    <Content Include="IMS\ADM\Default.aspx" />
-    <Content Include="IMS\ADM\SysAdm\Default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\blue_line.gif" />
     <Content Include="Images\KG_Logo.jpg" />
     <Content Include="Images\SafetyAllRound.jpg" />
     <Content Include="Images\spacer.gif" />
+    <Content Include="Scripts\datetimepicker_css.js" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -102,14 +114,64 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomSitemapProvider.cs" />
+    <Compile Include="DAL\KG_IMS.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KG_IMS.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Configuration.aspx.cs">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Configuration.aspx.designer.cs">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Locations.aspx.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Locations.aspx.designer.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\People.aspx.cs">
+      <DependentUpon>People.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\People.aspx.designer.cs">
+      <DependentUpon>People.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Project Locations.aspx.cs">
+      <DependentUpon>Project Locations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Project Locations.aspx.designer.cs">
+      <DependentUpon>Project Locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Rpt Type Sec Cont.aspx.cs">
+      <DependentUpon>Rpt Type Sec Cont.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Rpt Type Sec Cont.aspx.designer.cs">
+      <DependentUpon>Rpt Type Sec Cont.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Rpt Type.aspx.cs">
+      <DependentUpon>Rpt Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Rpt Type.aspx.designer.cs">
+      <DependentUpon>Rpt Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Rpt Type Sec.aspx.cs">
+      <DependentUpon>Rpt Type Sec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMS\ADM\SysAdm\Rpt Type Sec.aspx.designer.cs">
+      <DependentUpon>Rpt Type Sec.aspx</DependentUpon>
+    </Compile>
     <Compile Include="KG_IMS_SiteMap.cs" />
     <Compile Include="BLL\SiteMapCustomRoleProvider.cs" />
     <Compile Include="BLL\UserSecurity.cs" />
-    <Compile Include="DAL\System.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>System.dbml</DependentUpon>
-    </Compile>
     <Compile Include="IMS\ADM\SysAdm\Projects.aspx.cs">
       <DependentUpon>Projects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -117,12 +179,12 @@
     <Compile Include="IMS\ADM\SysAdm\Projects.aspx.designer.cs">
       <DependentUpon>Projects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm\Roles.aspx.cs">
-      <DependentUpon>Roles.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Security Levels.aspx.cs">
+      <DependentUpon>Security Levels.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IMS\ADM\SysAdm\Roles.aspx.designer.cs">
-      <DependentUpon>Roles.aspx</DependentUpon>
+    <Compile Include="IMS\ADM\SysAdm\Security Levels.aspx.designer.cs">
+      <DependentUpon>Security Levels.aspx</DependentUpon>
     </Compile>
     <Compile Include="IMS\ADM\SysAdm\WBS.aspx.cs">
       <DependentUpon>WBS.aspx</DependentUpon>
@@ -130,13 +192,6 @@
     </Compile>
     <Compile Include="IMS\ADM\SysAdm\WBS.aspx.designer.cs">
       <DependentUpon>WBS.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IMS\ERM\Default-ERM.aspx.cs">
-      <DependentUpon>Default-ERM.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IMS\ERM\Default-ERM.aspx.designer.cs">
-      <DependentUpon>Default-ERM.aspx</DependentUpon>
     </Compile>
     <Compile Include="IMS\ERM\PersonDetails.aspx.cs">
       <DependentUpon>PersonDetails.aspx</DependentUpon>
@@ -159,20 +214,6 @@
     <Compile Include="IMS\OPS\DailyReport\NewReport.aspx.designer.cs">
       <DependentUpon>NewReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\OPS\Default-OPS.aspx.cs">
-      <DependentUpon>Default-OPS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IMS\OPS\Default-OPS.aspx.designer.cs">
-      <DependentUpon>Default-OPS.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IMS\OPS\Tagging\Default-Tagging.aspx.cs">
-      <DependentUpon>Default-Tagging.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IMS\OPS\Tagging\Default-Tagging.aspx.designer.cs">
-      <DependentUpon>Default-Tagging.aspx</DependentUpon>
-    </Compile>
     <Compile Include="IMS\OPS\Tagging\View.aspx.cs">
       <DependentUpon>View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,34 +228,6 @@
     <Compile Include="IMS\OPS\Tagging\ViewDetails.aspx.designer.cs">
       <DependentUpon>ViewDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IMS\QCC\Default-QCC.aspx.cs">
-      <DependentUpon>Default-QCC.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IMS\QCC\Default-QCC.aspx.designer.cs">
-      <DependentUpon>Default-QCC.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IMS\HSE\Default-HSE.aspx.cs">
-      <DependentUpon>Default-HSE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IMS\HSE\Default-HSE.aspx.designer.cs">
-      <DependentUpon>Default-HSE.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IMS\ADM\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IMS\ADM\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IMS\ADM\SysAdm\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IMS\ADM\SysAdm\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,6 +236,16 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -234,35 +257,42 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
+    <Folder Include="IMS\HSE\" />
+    <Folder Include="IMS\QCC\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
-    <Content Include="packages.config" />
-    <Content Include="DAL\System.dbml">
+    <Content Include="DAL\KG_IMS.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>System.designer.cs</LastGenOutput>
+      <LastGenOutput>KG_IMS.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\Server01.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="Web.sitemap">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DAL\System.dbml.layout">
-      <DependentUpon>System.dbml</DependentUpon>
+    <None Include="DAL\KG_IMS.dbml.layout">
+      <DependentUpon>KG_IMS.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -279,7 +309,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3347</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/KG-IMS-test</IISUrl>
+          <IISUrl>http://localhost:3347/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

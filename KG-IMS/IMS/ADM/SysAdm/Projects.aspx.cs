@@ -16,7 +16,7 @@ namespace KG_IMS.IMS.ADM {
     }
 
     protected void gvbind() {
-      KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+      KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
 
       var proj = from c in db.s_Projects select c;
 
@@ -38,7 +38,7 @@ namespace KG_IMS.IMS.ADM {
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e) {
       GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
 
-      KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+      KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
 
       var proj = new KG_IMS.DAL.s_Projects() {
         ProjGUID = new Guid(GridView1.DataKeys[e.RowIndex].Value.ToString())
@@ -59,7 +59,7 @@ namespace KG_IMS.IMS.ADM {
 
       GridView1.EditIndex = -1;
 
-      KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+      KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
 
       var proj = db.s_Projects.Single(p => p.ProjGUID == new Guid(GridView1.DataKeys[e.RowIndex].Value.ToString()));
 
@@ -74,7 +74,7 @@ namespace KG_IMS.IMS.ADM {
         var proj = new KG_IMS.DAL.s_Projects{
           ProjectName = ((TextBox)GridView1.FooterRow.FindControl("txtAddProjectName")).Text.Trim()
       };
-        KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+        KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
         db.s_Projects.InsertOnSubmit(proj);
 
         try {

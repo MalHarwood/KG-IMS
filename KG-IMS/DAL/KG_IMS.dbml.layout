@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.75, 18.75" name="KG_IMS">
+  <DataContextMoniker Name="/KG_IMSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0d52133f-a6da-4da0-8b5a-2457232c7b2c" absoluteBounds="11.75, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_Rpt_Type_Section_Contents" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d244bf4c-09f1-494e-81b0-7429d857dafd" absoluteBounds="11.765, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="564a8d7e-d243-44b5-9cf1-f8ac7ac036fa" absoluteBounds="9.5, 10.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/KG_IMSDataContext/s_WBS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c2d7d7a-d35c-4178-badc-6316904792f9" absoluteBounds="9.515, 10.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c7109cb-e7b9-4865-8a63-07fc504a1bec" absoluteBounds="14.5, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_Rpt_Type_Sections" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0651984c-ae74-435e-a4d4-ac48af6b5ff1" absoluteBounds="14.515, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="606514a0-770f-4d4e-9cc3-8a41f2d4202c" absoluteBounds="0.75, 8.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_Rpt_Types" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e42c13a8-7d73-4478-98e5-d89f6033dc52" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="237767f8-c925-49a3-919c-87c5213c5c32" absoluteBounds="3.5, 1.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_T_Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1167bd31-eb4a-4443-aaa2-f75e1b19ef8a" absoluteBounds="3.515, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b67e04c6-47bf-406f-a155-67eaa9495b75" absoluteBounds="6.25, 1, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_T_Equipment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc10bb51-866a-4ded-b044-e1a3e3b5a898" absoluteBounds="6.265, 1.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47773614-24b4-4f11-a277-4ce60be16137" absoluteBounds="9, 1.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_T_Equipment_Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4211a031-2085-419b-86cc-d1da650f3ade" absoluteBounds="9.015, 2.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e67d6b7-bb91-43d1-a932-975fe241f75f" absoluteBounds="0.75, 1.875, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_T_EquipTypes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0504515-34b2-4add-a675-2e13ad0764d4" absoluteBounds="0.765, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="490f0d12-24fb-4af3-8c1d-2619964db0f2" absoluteBounds="12.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/KG_IMSDataContext/OPS_T_UserSecurity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86080bdd-5c70-4098-8670-9f2a83c3a51c" absoluteBounds="12.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62b59bb4-f46e-43fe-a1b0-f618f1f660b5" absoluteBounds="3.5, 5.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/KG_IMSDataContext/s_Locations" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2b1ad03-c33b-4e5c-be2c-fdeb64c6ffea" absoluteBounds="3.515, 6.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96074631-8c4d-470d-9047-989cb453cdd7" absoluteBounds="8.75, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/KG_IMSDataContext/s_NameValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="906b5acb-1170-4cc8-91ca-ffdfe46301ee" absoluteBounds="8.765, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b6a9632-bc22-42f6-8f01-4f45f601503c" absoluteBounds="3.5, 12.125, 2, 6.3861311848958309">
+      <DataClassMoniker Name="/KG_IMSDataContext/s_People" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8ab0e04-e470-4267-8f05-d1e813543b27" absoluteBounds="3.515, 12.585, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f91aa1b-b233-4cf2-9136-e6f5d05a9452" absoluteBounds="9.5, 7.125, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/KG_IMSDataContext/s_ProjectLocations" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db723e21-f8fd-4168-aea0-c3da88f51bc6" absoluteBounds="9.515, 7.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a947db8-9995-4c9b-bd5f-ac96728c85a6" absoluteBounds="6.75, 7.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/KG_IMSDataContext/s_Projects" />
+      <nestedChildShapes>
+        <elementListCompartment Id="323fdac9-3e7d-48f6-882d-ec721b20f828" absoluteBounds="6.765, 7.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b609b54d-2f75-44dd-9682-be19a3b97b46" absoluteBounds="0.75, 14.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/KG_IMSDataContext/s_SecurityLevels" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75139118-642b-4cfc-a708-0445125fb9f9" absoluteBounds="0.765, 14.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9787bf40-45f5-442f-abc2-a296dc8958ef" absoluteBounds="12.75, 7.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/KG_IMSDataContext/v_OPS_T_Equipment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab5d189b-e44e-4388-b94b-d616184adc63" absoluteBounds="12.765, 8.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc943e21-7f39-48b7-a839-3d639b8ca54a" absoluteBounds="12.75, 12.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/KG_IMSDataContext/v_PeopleRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c889b6bf-3d50-4311-9eec-cbef8643526e" absoluteBounds="12.765, 13.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.75 : 2.16429768880208); (14.5 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/OPS_Rpt_Type_Section_Contents/OPS_Rpt_Type_Section_Contents_OPS_Rpt_Type_Sections" />
+      <nodes>
+        <classShapeMoniker Id="0d52133f-a6da-4da0-8b5a-2457232c7b2c" />
+        <classShapeMoniker Id="7c7109cb-e7b9-4865-8a63-07fc504a1bec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.73159912109375); (6.25 : 2.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/OPS_T_Category/OPS_T_Category_OPS_T_Equipment" />
+      <nodes>
+        <classShapeMoniker Id="237767f8-c925-49a3-919c-87c5213c5c32" />
+        <classShapeMoniker Id="b67e04c6-47bf-406f-a155-67eaa9495b75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.79890055338542); (9 : 2.79890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/OPS_T_Equipment/OPS_T_Equipment_OPS_T_Equipment_Service" />
+      <nodes>
+        <classShapeMoniker Id="b67e04c6-47bf-406f-a155-67eaa9495b75" />
+        <classShapeMoniker Id="47773614-24b4-4f11-a277-4ce60be16137" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.76044840494792); (3.5 : 2.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/OPS_T_EquipTypes/OPS_T_EquipTypes_OPS_T_Category" />
+      <nodes>
+        <classShapeMoniker Id="9e67d6b7-bb91-43d1-a932-975fe241f75f" />
+        <classShapeMoniker Id="237767f8-c925-49a3-919c-87c5213c5c32" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 3.64589680989583); (1.75 : 4.13865397135417); (6.25 : 4.13865397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/OPS_T_EquipTypes/OPS_T_EquipTypes_OPS_T_Equipment" />
+      <nodes>
+        <classShapeMoniker Id="9e67d6b7-bb91-43d1-a932-975fe241f75f" />
+        <classShapeMoniker Id="b67e04c6-47bf-406f-a155-67eaa9495b75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.40625); (6.46875 : 6.40625); (6.46875 : 4.50160970052083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/s_Locations/s_Locations_OPS_T_Equipment" />
+      <nodes>
+        <classShapeMoniker Id="62b59bb4-f46e-43fe-a1b0-f618f1f660b5" />
+        <classShapeMoniker Id="b67e04c6-47bf-406f-a155-67eaa9495b75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.796877); (11.15625 : 6.796877); (11.15625 : 7.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/s_Locations/s_Locations_s_ProjectLocations" />
+      <nodes>
+        <classShapeMoniker Id="62b59bb4-f46e-43fe-a1b0-f618f1f660b5" />
+        <classShapeMoniker Id="8f91aa1b-b233-4cf2-9136-e6f5d05a9452" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 10.4343082682292); (7.75 : 11.6458566197917); (9.5 : 11.6458566197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/s_Projects/s_Projects_s_WBS" />
+      <nodes>
+        <classShapeMoniker Id="4a947db8-9995-4c9b-bd5f-ac96728c85a6" />
+        <classShapeMoniker Id="564a8d7e-d243-44b5-9cf1-f8ac7ac036fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 8.10659912109375); (9.5 : 8.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/s_Projects/s_Projects_s_ProjectLocations" />
+      <nodes>
+        <classShapeMoniker Id="4a947db8-9995-4c9b-bd5f-ac96728c85a6" />
+        <classShapeMoniker Id="8f91aa1b-b233-4cf2-9136-e6f5d05a9452" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.3854484049479); (3.5 : 15.3854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KG_IMSDataContext/s_SecurityLevels/s_SecurityLevels_s_People" />
+      <nodes>
+        <classShapeMoniker Id="b609b54d-2f75-44dd-9682-be19a3b97b46" />
+        <classShapeMoniker Id="4b6a9632-bc22-42f6-8f01-4f45f601503c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

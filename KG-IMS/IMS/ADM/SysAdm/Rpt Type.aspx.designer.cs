@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KG_IMS.IMS.ADM {
+namespace KG_IMS.IMS.ADM.SysAdm {
     
     
-    public partial class SysAdm {
+    public partial class Report_Types {
         
         /// <summary>
-        /// DynamicLinks control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DynamicLinks;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

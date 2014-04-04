@@ -10,18 +10,10 @@
     <div class="pageTitleArea">
         <span class="pageTitle">Personal Profile</span>
     </div>
-    <span class="error" id="lblDeleteStatus" runat="server"></span>
-
-    <table cellspacing="0" cellpadding="0" width="100%" border="0">
-        <tr>
-            <td valign="top">
-            </td>
-        </tr>
-    </table>
     <div id="toolbar">
-        <asp:ImageButton ID="btnSave" runat="server" CssClass="toolbarButton" AlternateText="Save" OnClick="btnSave_Click" ImageUrl="~/Images/btn_save.gif" />
+        <asp:ImageButton ID="btnSave" runat="server" CssClass="toolbarButton" AlternateText="Save" OnClick="btnSave_Click" ImageUrl="~/Images/ok.gif" />
         <asp:ImageButton id="btnCopy" runat="server" CssClass="toolbarButton" AlternateText="Copy" Visible="False" onclick="btnCopy_Click" ImageUrl="~/Images/btn_copy.gif" />
-        <asp:ImageButton ID="btnDelete" runat="server" Visible="False" CssClass="toolbarButton" AlternateText="Delete" OnClick="btnDelete_Click" ImageUrl="~/Images/btn_delete.gif" />
+        <asp:ImageButton ID="btnDelete" runat="server" Visible="False" CssClass="toolbarButton" AlternateText="Delete" OnClick="btnDelete_Click" ImageUrl="~/Images/delete.gif" />
         <input id="txtPersonGUID" type="hidden" name="txtPersonGUID" runat="server"><input id="txtPhotoID" type="hidden" name="txtPhotoID" runat="server">
         <asp:Label ID="lblStatus" runat="server" CssClass="error" />
     </div>

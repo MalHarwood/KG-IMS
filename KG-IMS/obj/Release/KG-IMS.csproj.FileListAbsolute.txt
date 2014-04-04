@@ -8,3 +8,5 @@ C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.dll
 C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.SqlServer.dll
 C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.xml
 C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\bin\EntityFramework.SqlServer.xml
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Release\KG_IMS.Properties.Resources.resources
+C:\MyFiles\Development\KGC\KG-IMS\KG-IMS\obj\Release\KG-IMS.csproj.GenerateResource.Cache

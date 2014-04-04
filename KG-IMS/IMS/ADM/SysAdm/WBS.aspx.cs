@@ -14,18 +14,28 @@ namespace KG_IMS.IMS.ADM {
     }
 
     protected void gvbind() {
-      KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+      KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
 
+      //Guid RequestedProjGUID;
+      //try {
+      //  RequestedProjGUID = Guid.Parse(ProjectSelector.SelectedValue);
+
+      //  var wbs = from c in db.s_WBS where (c.ProjGUID == RequestedProjGUID) select c;
       var wbs = from c in db.s_WBS select c;
 
-      GridView1.DataSource = wbs;
-      GridView1.DataBind();
+        GridView1.DataSource = wbs;
+        GridView1.DataBind();
+      //} catch  {
+      //  // nothing selected
+      //}
+
+
     }
 
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e) {
       GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
 
-      KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+      KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
 
       var wbs = new KG_IMS.DAL.s_WBS() {
         WBSGUID = new Guid(GridView1.DataKeys[e.RowIndex].Value.ToString())
@@ -46,7 +56,7 @@ namespace KG_IMS.IMS.ADM {
 
       GridView1.EditIndex = -1;
 
-      KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+      KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
 
       var wbs = db.s_WBS.Single(p => p.WBSGUID == new Guid(GridView1.DataKeys[e.RowIndex].Value.ToString()));
 
@@ -61,7 +71,7 @@ namespace KG_IMS.IMS.ADM {
         var wbs = new KG_IMS.DAL.s_WBS {
           Description = ((TextBox)GridView1.FooterRow.FindControl("txtAddDescription")).Text.Trim()
         };
-        KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+        KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
         db.s_WBS.InsertOnSubmit(wbs);
 
         try {

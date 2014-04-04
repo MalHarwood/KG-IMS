@@ -19,7 +19,7 @@ namespace KG_IMS.BLL {
       if (currentUser.Length < 1)
         return 0;
       else {
-        KG_IMS.DAL.SystemDataContext db = new DAL.SystemDataContext();
+        KG_IMS.DAL.KG_IMSDataContext db = new DAL.KG_IMSDataContext();
 
         var personRole = db.v_PeopleRole.Single(p => p.Username.Equals(currentUser));
 

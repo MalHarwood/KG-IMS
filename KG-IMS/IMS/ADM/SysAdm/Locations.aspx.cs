@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace KG_IMS.IMS.QCC {
-  public partial class Default : System.Web.UI.Page {
+namespace KG_IMS.IMS.ADM.SysAdm {
+  public partial class Locations : System.Web.UI.Page {
     protected void Page_Load(object sender, EventArgs e) {
 
     }

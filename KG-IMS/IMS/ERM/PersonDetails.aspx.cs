@@ -8,7 +8,14 @@ using System.Web.UI.WebControls;
 namespace KG_IMS.IMS.HSE {
   public partial class PersonDetails : System.Web.UI.Page {
     protected void Page_Load(object sender, EventArgs e) {
+      if (!IsPostBack) {
+        if((Request["PersonGUID"] + "").Length>0) {
 
+        } else {
+          // current user
+          txtUsername.Text = HttpContext.Current.User.Identity.Name.ToString();
+        }
+      }
     }
 
     protected void btnSave_Click(Object sender,
